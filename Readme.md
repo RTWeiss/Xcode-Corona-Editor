@@ -1,4 +1,3 @@
-
 #Xcode Corona Editor#
 Created by Jacob Nielsen 2014
 
@@ -14,8 +13,8 @@ Features:
 - Corona SDK API auto-completion
 - Corona Project Templates
 - Corona File Templates
-- Xcode behaviours to bridge Xcode-Corona Simulator
-- A bunch of other useful Xcode behaviours
+- Xcode behaviors to bridge Xcode-Corona Simulator
+- A bunch of other useful Xcode behaviors
 
 
 --------------------------------------------------------------
@@ -27,8 +26,8 @@ Installation:
 	
 	sudo your_path_to/Add-Corona-To-Xcode.sh
 
-3.	Now everything should be installed except the behaviours. 
-	Behaviours need to be installed manually in Xcode. See below.
+3.	Now everything should be installed except the behaviors. 
+	Behaviors need to be installed manually in Xcode. See below.
 
 
 --------------------------------------------------------------
@@ -46,36 +45,36 @@ Checking installation:
 *	Press cmd+n to create file templates.
 
 NOTE: I didn't yet manage to find a way for Xcode to recognize the .lua file type - meaning
-that you have to select the lua syntax coloring manually for each file. As a workaround for this I did a couple of behaviour scripts to deal with assigning lua syntax coloring. One script colors all lua files in current Xcode project and another only colors the selected file. You can assign these scripts to keyboard shortcuts via Xcode behaviours to make your life easier. ( See how to below )
+that you have to select the lua syntax coloring manually for each file. As a workaround for this I did a couple of behavior scripts to deal with assigning lua syntax coloring. One script colors all lua files in current Xcode project and another only colors the selected file. You can assign these scripts to keyboard shortcuts via Xcode behaviors to make your life easier. ( See how to below )
 
 If anyone figures out how to register the lua file type in Xcode please let me know. My guess is that something should be modified in the Xcode package here: /Applications/Xcode.app/Contents/OtherFrameworks/DevToolsCore.framework/Versions/A/Resources
 
 
 -
-Installing behaviours in Xcode:
+Installing behaviors in Xcode:
 
-1.	In the Xcode menu bar select: Xcode > Behaviours > Edit Behaviours..
+1.	In the Xcode menu bar select: Xcode > Behaviors > Edit Behaviors..
 
 2.	Click the + sign in the lower left corner
 
-3.	Name the behaviour "Launch Corona Simulator"
+3.	Name the behavior "Launch Corona Simulator"
 
-4.	Assign a shortcut by clicking the box next to the behaviour name (*)
+4.	Assign a shortcut by clicking the box next to the behavior name (*)
 
 5.	Click the option to "Notify using bezel or system notification"
 
 6.	Click the option "Run" and "Choose Script..."
 
-7.	Navigate to ~/Library/Developer/Xcode/UserData/Behaviours 
+7.	Navigate to ~/Library/Developer/Xcode/UserData/Behaviors 
 	and pick the script called "LaunchCoronaSimulator" (**)
 
-8.	Close the Behaviour window and open a Corona project.
+8.	Close the Behavior window and open a Corona project.
 
-9.	Try running the behaviour by using your shortcut or selecting it at Xcode > Behaviours
+9.	Try running the behavior by using your shortcut or selecting it at Xcode > Behaviors
 
-If the behaviour was installed correctly Corona Simulator ( +Terminal ) should launch and open the Corona project you are currently working on in Xcode. The script assumes that the CoronaSDK folder is installed in the applications folder. If you installed it somewhere else you need to change the coronaPath property in the script.
+If the behavior was installed correctly Corona Simulator ( +Terminal ) should launch and open the Corona project you are currently working on in Xcode. The script assumes that the CoronaSDK folder is installed in the applications folder. If you installed it somewhere else you need to change the coronaPath property in the script.
 
-Go through the same procedure to install the other behaviour scripts in the behaviours folder.
+Go through the same procedure to install the other behavior scripts in the behaviors folder.
 
 ------
 (*) It can be hard to find a free shortcut, but if you create a new Corona keybinding set in Xcode > Preferences > Keybindings don't be afraid to overwrite keybindings... you can always switch back.
@@ -84,7 +83,7 @@ Go through the same procedure to install the other behaviour scripts in the beha
 
 
 --------------------------------------------------------------
-Description of other included behaviour scripts:
+Description of other included behavior scripts:
 
 * LuaSyntaxColorProject: syntax colors all .lua files in current Xcode project.
 * LuaSyntaxColorFile: syntax colors selected .lua file in current Xcode project.
