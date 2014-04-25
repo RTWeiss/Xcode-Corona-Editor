@@ -1,9 +1,9 @@
 
 --------------------------------------------------------------
-#Xcode Corona Editor v.1.0#
+#Xcode Corona Editor # V.1.0
 Created by Jacob Nielsen 2014
 
-Works with Xcode 4+5+
+Works with Xcode 4+5
 Corona SDK, Corona Enterprise and CoronaCards
 --------------------------------------------------------------
 
