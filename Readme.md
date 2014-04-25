@@ -1,9 +1,9 @@
 #Xcode Corona Editor#
-Created by Jacob Nielsen 2014
+Xcode as IDE for Corona SDK - Created by Jacob Nielsen 2014
 
-Works with Xcode 4+5
+Works with Xcode 4+5 - Corona SDK, Corona Enterprise and CoronaCards
 
-Corona SDK, Corona Enterprise and CoronaCards
+Feel free to clone this repository and send me pull requests if you come up with improvements or new features.
 
 --------------------------------------------------------------
 
@@ -115,7 +115,10 @@ Tips and tricks:
   ~/Library/Developer/Xcode/Templates and edit the files. Project templates need a unique id to work. Edit the templates
   TemplateInfo.plist to do that.
 
-* Feel free to clone this repository and send me pull requests if you come up with improvements or new features.
+* To add new applescript behaviors you need to:
+  - Add #!/usr/bin/osascript at the top of the script
+  - Export the script as text from AppleScript Editor
+  - Run chmod -x <your_script> on it in the terminal
 
 
 --------------------------------------------------------------
