@@ -1,9 +1,11 @@
 
---------------------------------------------------------------
-#Xcode Corona Editor 
+#Xcode Corona Editor#
 Created by Jacob Nielsen 2014
 
 Works with Xcode 4+5
+
+Corona SDK, Corona Enterprise and CoronaCards
+
 --------------------------------------------------------------
 
 Features:
@@ -12,7 +14,7 @@ Features:
 - Corona SDK API auto-completion
 - Corona Project Templates
 - Corona File Templates
-- Xcode behaviours to bridge Corona Simulator
+- Xcode behaviours to bridge Xcode-Corona Simulator
 - A bunch of other useful Xcode behaviours
 
 
@@ -22,8 +24,8 @@ Installation:
 1.	Make sure Xcode is closed down.
 
 2.	Run the Add-Corona-To-Xcode.sh script in terminal by typing:
+	
 	sudo your_path_to/Add-Corona-To-Xcode.sh
-	(You need to enter your user password)
 
 3.	Now everything should be installed except the behaviours. 
 	Behaviours need to be installed manually in Xcode. See below.
@@ -49,7 +51,7 @@ that you have to select the lua syntax coloring manually for each file. As a wor
 If anyone figures out how to register the lua file type in Xcode please let me know. My guess is that something should be modified in the Xcode package here: /Applications/Xcode.app/Contents/OtherFrameworks/DevToolsCore.framework/Versions/A/Resources
 
 
---------------------------------------------------------------
+-
 Installing behaviours in Xcode:
 
 1.	In the Xcode menu bar select: Xcode > Behaviours > Edit Behaviours..
@@ -118,17 +120,12 @@ Tips and tricks:
 
 
 --------------------------------------------------------------
-Misc:
-
-Folders where XCE files gets installed:
-~/Library/Developer/Xcode/UserData/CodeSnippets/
-~/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/Lua.xclangspec 
-~/Library/Developer/Xcode/Templates
-~/Library/Developer/Xcode/UserData/Behaviours
-
 Resources used to create XCE:
+
 http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/
+
 http://blog.boreal-kiss.net/2011/03/11/a-minimal-project-template-for-xcode-4/
 
 The lua syntax coloring script was found at this repository (Thanks to Brian Reinhart):
+
 https://github.com/breinhart/Lua-In-Xcode
