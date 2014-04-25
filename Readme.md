@@ -2,8 +2,8 @@
 --------------------------------------------------------------
 #Xcode Corona Editor 
 Created by Jacob Nielsen 2014
+
 Works with Xcode 4+5
-Corona SDK, Corona Enterprise
 --------------------------------------------------------------
 
 Features:
