@@ -1,76 +1,68 @@
-#Xcode Corona Editor#
-Xcode as IDE for Corona SDK - Created by Jacob Nielsen 2014
+#Xcode as editor for Corona SDK#
+Created by Jacob Nielsen 2014
 
 Works with Xcode 4+5 - Corona SDK, Corona Enterprise and CoronaCards
 
-Feel free to clone this repository and send me pull requests if you come up with improvements or new features.
-
 --------------------------------------------------------------
 
-Features:
+This project includes:
 
-- Lua (Corona) Syntax Coloring
-- Corona SDK API auto-completion
+- Corona auto-completion for all API calls and constants
 - Corona Project Templates
 - Corona File Templates
-- Xcode behaviors to bridge Xcode-Corona Simulator
-- A bunch of other useful Xcode behaviors
+- Lua Syntax Coloring
+- A lot of (behavior) scripts for improved workflow
+- Launch Corona Simulator with current project from Xcode
 
 
 --------------------------------------------------------------
 Installation:
 
-1.	Make sure Xcode is closed down.
+After cloning this repo or downloading it as a zip file.
 
-2.	Run the Add-Corona-To-Xcode.sh script in terminal by typing:
-	
-	sudo your_path_to/Add-Corona-To-Xcode.sh
+1.  Make sure Xcode is closed down.
 
-3.	Now everything should be installed except the behaviors. 
-	Behaviors need to be installed manually in Xcode. See below.
+2.  Run the Add-Corona-To-Xcode.sh script in terminal by typing:
+  
+  sudo your_path_to/Add-Corona-To-Xcode.sh
+
+3.  The script installs everything exept the behavior scripts.
+  Behaviors need to be installed manually in Xcode. See below.
 
 
 --------------------------------------------------------------
 Checking installation:
 
-*	Start Xcode and create a new project template for Corona with:
-	File > New > Project ( or shift+cmd+n )
+* Start Xcode and create a new project template for Corona with:
+  File > New > Project ( or shift+cmd+n )
 
-*	When the project is created you can check if Lua syntax coloring is installed correctly
-	by selecting eg. the main.lua file and navigating to: Editor > Syntax Coloring > Lua
+* When the project is created you can check if Lua syntax coloring is installed correctly
+  by selecting eg. the main.lua file and navigating to: Editor > Syntax Coloring > Lua
 
-*	Try typing eg. display in one of the lua files to see if auto-completion works.
-	( If not make sure auto-completion is enabled in the Xcode preferences )
+* Try typing eg. display in one of the lua files to see if auto-completion works.
+  ( If not make sure auto-completion is enabled in the Xcode preferences )
 
-*	Press cmd+n to create file templates.
+* Press cmd+n to create file templates.
 
 NOTE: I didn't yet manage to find a way for Xcode to recognize the .lua file type - meaning
-that you have to select the lua syntax coloring manually for each file. As a workaround for this I did a couple of behavior scripts to deal with assigning lua syntax coloring. One script colors all lua files in current Xcode project and another only colors the selected file. You can assign these scripts to keyboard shortcuts via Xcode behaviors to make your life easier. ( See how to below )
+that you have to select the lua syntax coloring manually for each file. As a workaround for this I did a couple of behavior scripts to deal with assigning lua syntax coloring. One script for coloring all lua files in current Xcode project and another one for coloring the selected file. You can assign these scripts to keyboard shortcuts via Xcode behaviors to make your life easier. ( See how to below )
 
-If anyone figures out how to register the lua file type in Xcode please let me know. My guess is that something should be modified in the Xcode package here: /Applications/Xcode.app/Contents/OtherFrameworks/DevToolsCore.framework/Versions/A/Resources
+If anyone figures out how to register the lua file type in Xcode please let me know. My guess is that something should be modified in the DevToolsCore.framework here: /Applications/Xcode.app/Contents/OtherFrameworks/DevToolsCore.framework/Versions/A/Resources
 
 
 -
 Installing behaviors in Xcode:
 
-1.	In the Xcode menu bar select: Xcode > Behaviors > Edit Behaviors..
-
-2.	Click the + sign in the lower left corner
-
-3.	Name the behavior "Launch Corona Simulator"
-
-4.	Assign a shortcut by clicking the box next to the behavior name (*)
-
-5.	Click the option to "Notify using bezel or system notification"
-
-6.	Click the option "Run" and "Choose Script..."
-
-7.	Navigate to ~/Library/Developer/Xcode/UserData/Behaviors 
-	and pick the script called "LaunchCoronaSimulator" (**)
-
-8.	Close the Behavior window and open a Corona project.
-
-9.	Try running the behavior by using your shortcut or selecting it at Xcode > Behaviors
+1.  In the Xcode menu bar select: Xcode > Behaviors > Edit Behaviors..
+2.  Click the + sign in the lower left corner
+3.  Name the behavior "Launch Corona Simulator"
+4.  Assign a shortcut by clicking the box next to the behavior name (*)
+5.  Click the option to "Notify using bezel or system notification"
+6.  Click the option "Run" and "Choose Script..."
+7.  Navigate to ~/Library/Developer/Xcode/UserData/Behaviors 
+  and pick the script called "LaunchCoronaSimulator" (**)
+8.  Close the Behavior window and open a Corona project.
+9.  Try running the behavior by using your shortcut or selecting it at Xcode > Behaviors
 
 If the behavior was installed correctly Corona Simulator ( +Terminal ) should launch and open the Corona project you are currently working on in Xcode. The script assumes that the CoronaSDK folder is installed in the applications folder. If you installed it somewhere else you need to change the coronaPath property in the script.
 
@@ -95,7 +87,7 @@ Description of other included behavior scripts:
 
 * AndroidDeviceInstallApk: Installation of Android SDK needed for this to work. Change buildFolder and adbPath properties in the script to match your setup.
 
-The rest explain themselves. They are simply bridging functionality from Corona Simulator:
+The rest are simply bridging functionality from Corona Simulator:
 
 * ShowProjectSandbox
 * CoronaRelaunch
@@ -131,3 +123,4 @@ http://blog.boreal-kiss.net/2011/03/11/a-minimal-project-template-for-xcode-4/
 The lua syntax coloring script was found at this repository (Thanks to Brian Reinhart):
 
 https://github.com/breinhart/Lua-In-Xcode
+hh
