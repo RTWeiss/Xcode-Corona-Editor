@@ -69,7 +69,7 @@ If the behavior was installed correctly Corona Simulator ( +Terminal ) should la
 Go through the same procedure to install the other behavior scripts in the behaviors folder.
 
 ------
-(*) It can be hard to find a free shortcut, but if you create a new Corona keybinding set in Xcode > Preferences > Keybindings don't be afraid to overwrite keybindings... you can always switch back.
+(*) It can be hard to find a free shortcut, but if you create a new keybinding set for Corona in Xcode > Preferences > Keybindings don't be afraid to overwrite keybindings... you can always switch back.
 
 (**) By default the Library folder isn't visible in Mac OS. If you can't see it run this in terminal: chflags nohidden ~/Library/
 
@@ -77,17 +77,16 @@ Go through the same procedure to install the other behavior scripts in the behav
 --------------------------------------------------------------
 Description of other included behavior scripts:
 
-* LuaSyntaxColorProject: syntax colors all .lua files in current Xcode project.
-* LuaSyntaxColorFile: syntax colors selected .lua file in current Xcode project.
+* LuaSyntaxColorProject: colors all .lua files in current Xcode project.
+* LuaSyntaxColorFile: colors selected .lua file in current Xcode project.
 
-* Scale@2xTo@1x: Creates downscaled @1x.png copies of @2x.png files in your project folder.
-  (if someone feels like extending this script to a @4x version please let me know)
+* Scale@2xTo@1x: Creates downscaled @1x.png copies of @2x.png files in your project folder. (if someone feels like extending this script to a @4x version please let me know)
 
 * OpenADM: Opens the Android Device Monitor. Installation of Android SDK needed. Change adm_path in the script to match your setup.
 
 * AndroidDeviceInstallApk: Installation of Android SDK needed for this to work. Change buildFolder and adbPath properties in the script to match your setup.
 
-The rest are simply bridging functionality from Corona Simulator:
+The rest of the scripts are simply bridging functionality from Corona Simulator:
 
 * ShowProjectSandbox
 * CoronaRelaunch
@@ -107,7 +106,8 @@ Tips and tricks:
   ~/Library/Developer/Xcode/Templates and edit the files. Project templates need a unique id to work. Edit the templates
   TemplateInfo.plist to do that.
 
-* To add new applescript behaviors you need to:
+* If you want to create your own applescript behavior scripts remember to:
+
   - Add #!/usr/bin/osascript at the top of the script
   - Export the script as text from AppleScript Editor
   - Run chmod -x <your_script> on it in the terminal
@@ -123,4 +123,3 @@ http://blog.boreal-kiss.net/2011/03/11/a-minimal-project-template-for-xcode-4/
 The lua syntax coloring script was found at this repository (Thanks to Brian Reinhart):
 
 https://github.com/breinhart/Lua-In-Xcode
-hh
