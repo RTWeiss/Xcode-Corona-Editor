@@ -116,10 +116,10 @@ Tips and tricks:
   - Run chmod -x <your_script> on it in the terminal
 
 * If you need to migrate a project from another IDE to Xcode do the folowing:
-  - In Xcode create a project template and delete the folder with the Corona files.
-  - Create a new folder with the same name as the one you deleted
+  - In Xcode create a project template and delete the folder with the Corona files it created.
+  - Create a new folder with the same name as the one you deleted.
   - Put your own Corona files in it.
-  - In Xcode select File > Add files to Project.. and select all you files.
+  - In Xcode select File > Add files to Project.. and select the folder you just created.
   - Run the LuaSyntaxColorProject behavior script.
 
 
