@@ -1,6 +1,9 @@
 #!/usr/bin/osascript
 
--- Xcode behaviour script to relaunch Corona simulator
+-- Xcode behaviour script to save all in xcode and relaunch Corona simulator
+tell application "System Events"
+	keystroke "s" using {option down, command down}
+end tell
 
 tell application "System Events"
 	set simulatorIsRunning to (name of processes) contains "Corona Simulator"
@@ -16,6 +19,6 @@ if simulatorIsRunning = true then
 		end tell
 	end tell
 	
-	--tell application "Xcode" to activate
+	tell application "Xcode" to activate
 	
 end if

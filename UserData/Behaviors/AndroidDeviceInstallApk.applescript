@@ -6,8 +6,10 @@ Installation of Android SDK needed. Change buildFolder and adbPath properties
 to match your setup.
 *)
 
-property buildFolder : (the POSIX path of (path to desktop folder as text))
-property adbPath : "/Android/sdk/platform-tools/"
+property buildFolder : (the POSIX path of (path to desktop folder as text)) -- & "/builds"
+property adbPath : (the POSIX path of ("HD:Android:sdk:platform-tools"))
+
+--display dialog ("Path to adb: " & adbPath)
 
 set apk to choose file with prompt "Choose .apk to install to device:" of type {"apk"} default location buildFolder
 set apkPath to (the POSIX path of apk)
