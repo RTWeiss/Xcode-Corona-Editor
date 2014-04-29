@@ -1,5 +1,5 @@
 #Xcode as editor for Corona SDK#
-Created by Jacob Nielsen 2014
+Created by Jacob Nielsen 2014 - v.1.1
 
 Works with Xcode 4+5 - Corona SDK, Corona Enterprise and CoronaCards
 
@@ -7,12 +7,12 @@ Works with Xcode 4+5 - Corona SDK, Corona Enterprise and CoronaCards
 
 This project includes:
 
-- Corona auto-completion for all API calls and constants
-- Corona Project Templates
-- Corona File Templates
+- Auto-completion for all Corona API calls and constants
 - Lua Syntax Coloring
-- A lot of (behavior) scripts for improved workflow
+- Corona Project Templates built into Xcode
+- Corona File Templates built into Xcode
 - Launch Corona Simulator with current project from Xcode
+- A lot of (behavior) scripts for improved workflow
 
 
 --------------------------------------------------------------
@@ -80,11 +80,15 @@ Description of other included behavior scripts:
 * LuaSyntaxColorProject: colors all .lua files in current Xcode project.
 * LuaSyntaxColorFile: colors selected .lua file in current Xcode project.
 
-* Scale@2xTo@1x: Creates downscaled @1x.png copies of @2x.png files in your project folder. (if someone feels like extending this script to a @4x version please let me know)
-
 * OpenADM: Opens the Android Device Monitor. Installation of Android SDK needed. Change adm_path in the script to match your setup.
 
-* AndroidDeviceInstallApk: Installation of Android SDK needed for this to work. Change buildFolder and adbPath properties in the script to match your setup.
+* AndroidDeviceInstallApk: Installs apk build to Android device connected via usb. Installation of Android SDK needed for this to work. Change buildFolder and adbPath properties in the script to match your setup.
+
+* ShowFilePath: Reveals file selected in Xcode in finder
+
+* SaveAllAndRelaunch: Saves all modified files in Xcode and relaunches the Corona Simulator.
+
+* Scale@2xTo@1x: Creates downscaled @1x.png copies of @2x.png files in your project folder. (TODO @4x version)
 
 The rest of the scripts are simply bridging functionality from Corona Simulator:
 
@@ -93,24 +97,30 @@ The rest of the scripts are simply bridging functionality from Corona Simulator:
 * BuildCoronaIOS
 * BuildCoronaAndroid
 
-
 --------------------------------------------------------------
 Tips and tricks:
 
 * I didn't add a lot of Corona API keywords to the Lua.xclangspec because I prefer it that way, but it is possible.
-  After installing lua syntax coloring with you can add more keywords for coloring in the Lua.xclangspec located at: 
+  After installing lua syntax coloring you can add more keywords for coloring in the Lua.xclangspec located at: 
   ~/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/Lua.xclangspec 
   You don't need to run the Add-Lua.sh script again for Xcode to register the changes.
 
 * It is quite easy to do your own Project / File Templates. As a starting point just copy one of the subfolders located at:
   ~/Library/Developer/Xcode/Templates and edit the files. Project templates need a unique id to work. Edit the templates
-  TemplateInfo.plist to do that.
+  TemplateInfo.plist.
 
 * If you want to create your own applescript behavior scripts remember to:
 
   - Add #!/usr/bin/osascript at the top of the script
   - Export the script as text from AppleScript Editor
   - Run chmod -x <your_script> on it in the terminal
+
+* If you need to migrate a project from another IDE to Xcode do the folowing:
+  - In Xcode create a project template and delete the folder with the Corona files.
+  - Create a new folder with the same name as the one you deleted
+  - Put your own Corona files in it.
+  - In Xcode select File > Add files to Project.. and select all you files.
+  - Run the LuaSyntaxColorProject behavior script.
 
 
 --------------------------------------------------------------
