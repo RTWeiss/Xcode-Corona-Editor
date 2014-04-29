@@ -90,6 +90,10 @@ Description of other included behavior scripts:
 
 * Scale@2xTo@1x: Creates downscaled @1x.png copies of @2x.png files in your project folder. (TODO @4x version)
 
+* OnlineDocSearch: Searches Coronas online documentation with selected text in Xcode. 
+
+* DashDocSearch: Searches Coronas documentation with selected text in Dash documentation browser application ( http://kapeli.com/dash )
+
 The rest of the scripts are simply bridging functionality from Corona Simulator:
 
 * ShowProjectSandbox
