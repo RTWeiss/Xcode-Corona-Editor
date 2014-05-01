@@ -27,21 +27,25 @@ tell application "System Events"
 	delay 0.2
 	set lookUp to the clipboard as text
 	
+	(*
 	if saveClipboard = lookUp then
 		set lookUp to ""
 	end if
+	*)
 	
 	delay 0.2
 	set the clipboard to saveClipboard
 end tell
 
 --display dialog (lookUp)
+
 set AppleScript's text item delimiters to {"."}
 try
 	set testValue to text item 2 of lookUp
 on error
 	set AppleScript's text item delimiters to {":"}
 end try
+
 set docType to text item 1 of lookUp
 
 if globalsList contains docType then
@@ -62,10 +66,24 @@ else
 				exit repeat
 			end if
 		end repeat
-		
 	on error
-		set docElement to "index"
-		set searchType to "type"
+		set inTypeList to false
+		set listIndex to 0
+		repeat with currentTypeList in TypeList as list
+			set listIndex to (listIndex + 1)
+			if currentTypeList contains docType then
+				set docElement to docType
+				set docType to (item listIndex of typeNames)
+				set searchType to "type"
+				set inTypeList to true
+				exit repeat
+			end if
+		end repeat
+		
+		if inTypeList = false then
+			set docElement to "index"
+			set searchType to "library"
+		end if
 	end try
 end if
 
@@ -104,27 +122,10 @@ on trimAndCut(someText)
 	return someText
 end trimAndCut
 
-set foundDoc to true
-
 delay 1.5
 tell application "Safari"
 	set windowName to name of front document as string
 	if windowName = "404 Not Found" then
-		set the URL of the front document to "http://docs.coronalabs.com/api/index.html"
-		set foundDoc to false
+		set the URL of the front document to "http://www.google.com/cse?cx=009283852522218786394%3Ag40gqt2m6rq&ie=UTF-8&q=" & lookUp & "&sa=Search#gsc.tab=0&gsc.q=" & lookUp & "&gsc.page=1"
 	end if
 end tell
-
-if foundDoc = false then
-	delay 1.5
-	tell application "System Events"
-		tell process "Safari"
-			click menu item "Find…" of menu 1 of menu item "Find" of menu 1 of menu bar item "Edit" of menu bar 1
-		end tell
-	end tell
-end if
-
-
-
-
-
