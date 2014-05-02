@@ -17,11 +17,12 @@ Created by Jacob Nielsen 2014 - v.1.2
 Behaviour scripts extends Xcodes functionality. You can pick them from the menu bar or put them on a keyboard shortcut.
 Included behavior scripts:
 
-* Launch Corona Simulator with current project.
-* Online documentation lookup from selected text.
+* Launch Corona Simulator with current project
+* Online documentation lookup from selected text
 * Bridging of Corona Simulators options to: Show Project Sandbox, Relaunch and Build
 * Open Android Device Monitor (Android SDK installation needed)
 * Install apk to usb connected Android device (Android SDK installation needed)
+* Upload to TestFlight
 + and more...
 
 --------------------------------------------------------------
@@ -93,6 +94,8 @@ Go through the same procedure to install the other behavior scripts you would li
 * OpenADM: Opens the Android Device Monitor. Installation of Android SDK needed. Change adm_path in the script to match your setup.
 
 * AndroidDeviceInstallApk: Installs apk build to Android device connected via usb. Installation of Android SDK needed for this to work. Change buildFolder and adbPath properties in the script to match your setup.
+
+* UploadTestFlight. Converts app to ipa and submits it to TestFlight. Installation of TestFlight desktop application needed: http://www.testflightapp.com/desktop
 
 * ShowFilePath: Reveals file selected in Xcode in finder
 
