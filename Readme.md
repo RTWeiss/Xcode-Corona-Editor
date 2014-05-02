@@ -1,22 +1,31 @@
-#Xcode as editor for Corona SDK#
-Created by Jacob Nielsen 2014 - v.1.1
+#Xcode as Corona SDK Editor#
 
-Works with Xcode 4+5 - Corona SDK, Corona Enterprise and CoronaCards
+This plugin works with Xcode 4+5 - Corona Starter, Basic, Pro, Enterprise and Cards
 
---------------------------------------------------------------
-
-This project includes:
-
-- Auto-completion for all Corona API calls and constants
-- Lua Syntax Coloring
-- Corona Project Templates built into Xcode
-- Corona File Templates built into Xcode
-- Launch Corona Simulator with current project from Xcode
-- A lot of (behavior) scripts for improved workflow
-
+Created by Jacob Nielsen 2014 - v.1.2
 
 --------------------------------------------------------------
-Installation:
+
+###This project includes:###
+
+* Auto-completion for all Corona API calls and constants
+* Lua Syntax Coloring
+* Corona Project Templates built into Xcode
+* Corona File Templates built into Xcode
+* Xcode behavior scripts for improved workflow
+
+Behaviour scripts extends Xcodes functionality. You can pick them from the menu bar or put them on a keyboard shortcut.
+Included behavior scripts:
+
+* Launch Corona Simulator with current project.
+* Online documentation lookup from selected text.
+* Bridging of Corona Simulators options to: Show Project Sandbox, Relaunch and Build
+* Open Android Device Monitor (Android SDK installation needed)
+* Install apk to usb connected Android device (Android SDK installation needed)
++ and more
+
+--------------------------------------------------------------
+###Installation:###
 
 After cloning this repo or downloading it as a zip file.
 
@@ -24,14 +33,14 @@ After cloning this repo or downloading it as a zip file.
 
 2.  Run the Add-Corona-To-Xcode.sh script in terminal by typing:
   
-  sudo your_path_to/Add-Corona-To-Xcode.sh
+  sudo <your_path_to/Add-Corona-To-Xcode.sh>
 
 3.  The script installs everything exept the behavior scripts.
   Behaviors need to be installed manually in Xcode. See below.
 
 
 --------------------------------------------------------------
-Checking installation:
+###Checking installation:###
 
 * Start Xcode and create a new project template for Corona with:
   File > New > Project ( or shift+cmd+n )
@@ -51,7 +60,7 @@ If anyone figures out how to register the lua file type in Xcode please let me k
 
 
 -
-Installing behaviors in Xcode:
+###Installing behaviors in Xcode:###
 
 1.  In the Xcode menu bar select: Xcode > Behaviors > Edit Behaviors..
 2.  Click the + sign in the lower left corner
@@ -59,14 +68,15 @@ Installing behaviors in Xcode:
 4.  Assign a shortcut by clicking the box next to the behavior name (*)
 5.  Click the option to "Notify using bezel or system notification"
 6.  Click the option "Run" and "Choose Script..."
-7.  Navigate to ~/Library/Developer/Xcode/UserData/Behaviors 
-  and pick the script called "LaunchCoronaSimulator" (**)
+7.  Navigate to ~/Library/Developer/Xcode/UserData/Behaviors and pick the script called "LaunchCoronaSimulator" (**)
 8.  Close the Behavior window and open a Corona project.
 9.  Try running the behavior by using your shortcut or selecting it at Xcode > Behaviors
 
 If the behavior was installed correctly Corona Simulator ( +Terminal ) should launch and open the Corona project you are currently working on in Xcode. The script assumes that the CoronaSDK folder is installed in the applications folder. If you installed it somewhere else you need to change the coronaPath property in the script.
 
-Go through the same procedure to install the other behavior scripts in the behaviors folder.
+The first time you run the "LaunchCoronaSimulator" script a dialog will show asking you to enable access for assistive devices. You need to do this or the scripts wont work. 
+
+Go through the same procedure to install the other behavior scripts you would like to use.
 
 ------
 (*) It can be hard to find a free shortcut, but if you create a new keybinding set for Corona in Xcode > Preferences > Keybindings don't be afraid to overwrite keybindings... you can always switch back.
@@ -75,7 +85,7 @@ Go through the same procedure to install the other behavior scripts in the behav
 
 
 --------------------------------------------------------------
-Description of other included behavior scripts:
+###Description of other included behavior scripts:###
 
 * LuaSyntaxColorProject: colors all .lua files in current Xcode project.
 * LuaSyntaxColorFile: colors selected .lua file in current Xcode project.
@@ -102,7 +112,7 @@ The rest of the scripts are simply bridging functionality from Corona Simulator:
 * BuildCoronaAndroid
 
 --------------------------------------------------------------
-Tips and tricks:
+###Miscellaneous:###
 
 * I didn't add a lot of Corona API keywords to the Lua.xclangspec because I prefer it that way, but it is possible.
   After installing lua syntax coloring you can add more keywords for coloring in the Lua.xclangspec located at: 
@@ -128,7 +138,7 @@ Tips and tricks:
 
 
 --------------------------------------------------------------
-Resources used to create XCE:
+###Resources used to create XCE:###
 
 http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/
 
