@@ -33,7 +33,7 @@ After cloning this repo or downloading it as a zip file.
 
 2.  Run the Add-Corona-To-Xcode.sh script in terminal by typing:
   
-  ***sudo your_path_to/Add-Corona-To-Xcode.sh***
+  sudo your_path_to/Add-Corona-To-Xcode.sh
 
 3.  The script installs everything exept the behavior scripts.
   Behaviors need to be installed manually in Xcode. See below.
