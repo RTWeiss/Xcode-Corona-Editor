@@ -22,7 +22,7 @@ Included behavior scripts:
 * Bridging of Corona Simulators options to: Show Project Sandbox, Relaunch and Build
 * Open Android Device Monitor (Android SDK installation needed)
 * Install apk to usb connected Android device (Android SDK installation needed)
-+ and more
++ and more...
 
 --------------------------------------------------------------
 ###Installation:###
@@ -33,7 +33,7 @@ After cloning this repo or downloading it as a zip file.
 
 2.  Run the Add-Corona-To-Xcode.sh script in terminal by typing:
   
-  sudo <your_path_to/Add-Corona-To-Xcode.sh>
+  ***sudo your_path_to/Add-Corona-To-Xcode.sh***
 
 3.  The script installs everything exept the behavior scripts.
   Behaviors need to be installed manually in Xcode. See below.
