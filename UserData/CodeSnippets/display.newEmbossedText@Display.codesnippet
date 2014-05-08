@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>display.newEmbossedText( &lt;#{ options #&gt;#&gt; )</string>
+	<string>display.newEmbossedText( &lt;#{ options }#&gt; )</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>display.newEmbossedText: Display</string>
 	<key>IDECodeSnippetLanguage</key>
