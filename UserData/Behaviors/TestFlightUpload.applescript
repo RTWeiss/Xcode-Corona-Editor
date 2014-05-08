@@ -5,7 +5,7 @@ Xcode behaviour script to convert app file to ipa and submit it to TestFlight.
 Installation of TestFlight desktop application needed: http://www.testflightapp.com/desktop
 *)
 
-property buildFolder : (the POSIX path of (path to desktop folder as text)) & "/Builds/"
+property buildFolder : (the POSIX path of (path to desktop folder as text)) -- & "/Builds/"
 
 set appFile to choose file with prompt "Choose app to submit to Testflight:" of type {"app"} default location buildFolder
 
