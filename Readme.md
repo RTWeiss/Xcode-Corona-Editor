@@ -2,14 +2,14 @@
 
 This plugin works with Xcode 4+5 - Corona Starter, Basic, Pro, Enterprise and Cards
 
-Created by Jacob Nielsen 2014 - v.1.2
+Created by Jacob Nielsen 2014 - v.1.3
 
 --------------------------------------------------------------
 
 ###This project includes:###
 
 * Auto-completion for all Corona API calls and constants
-* Lua Syntax Coloring
+* Lua/Corona Syntax Coloring
 * Corona Project Templates built into Xcode
 * Corona File Templates built into Xcode
 * Xcode behavior scripts for improved workflow
@@ -117,12 +117,11 @@ The rest of the scripts are simply bridging functionality from Corona Simulator:
 --------------------------------------------------------------
 ###Miscellaneous:###
 
-* I didn't add a lot of Corona API keywords to the Lua.xclangspec because I prefer it that way, but it is possible.
-  After installing lua syntax coloring you can add more keywords for coloring in the Lua.xclangspec located at: 
+* After installing lua syntax coloring you can add/remove keywords for coloring in the Lua.xclangspec located at: 
   ~/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/Lua.xclangspec 
   You don't need to run the Add-Lua.sh script again for Xcode to register the changes.
 
-* It is quite easy to do your own Project / File Templates. As a starting point just copy one of the subfolders located at:
+* It is quite easy to do your own Project/File Templates. As a starting point just copy one of the subfolders located at:
   ~/Library/Developer/Xcode/Templates and edit the files. Project templates need a unique id to work. Edit the templates
   TemplateInfo.plist.
 
@@ -133,15 +132,15 @@ The rest of the scripts are simply bridging functionality from Corona Simulator:
   - Run chmod -x <your_script> on it in the terminal
 
 * If you need to migrate a project from another IDE to Xcode do the folowing:
-  - In Xcode create a project template and delete the folder with the Corona files it created.
-  - Create a new folder with the same name as the one you deleted.
+  - In Xcode create a project template and delete the folder with the Corona files (from xcode).
+  - In finder create a new folder with the same name as the one you deleted.
   - Put your own Corona files in it.
   - In Xcode select File > Add files to Project.. and select the folder you just created.
   - Run the LuaSyntaxColorProject behavior script.
 
 
 --------------------------------------------------------------
-###Resources used to create XCE:###
+###Resources used:###
 
 http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/
 
