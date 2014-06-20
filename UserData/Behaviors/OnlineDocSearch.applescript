@@ -27,25 +27,21 @@ tell application "System Events"
 	delay 0.2
 	set lookUp to the clipboard as text
 	
-	(*
 	if saveClipboard = lookUp then
 		set lookUp to ""
 	end if
-	*)
 	
 	delay 0.2
 	set the clipboard to saveClipboard
 end tell
 
 --display dialog (lookUp)
-
 set AppleScript's text item delimiters to {"."}
 try
 	set testValue to text item 2 of lookUp
 on error
 	set AppleScript's text item delimiters to {":"}
 end try
-
 set docType to text item 1 of lookUp
 
 if globalsList contains docType then
@@ -96,6 +92,14 @@ set docUrl to "http://docs.coronalabs.com/api/" & searchType & "/" & docType & "
 
 tell application "Safari" to activate
 tell application "Safari"
+	try
+		set windowName to name of front document as string
+		if windowName = "Untitled" then
+			delay 0.5
+		end if
+	on error
+		make new document
+	end try
 	set the URL of the front document to docUrl
 end tell
 
@@ -122,10 +126,27 @@ on trimAndCut(someText)
 	return someText
 end trimAndCut
 
+set foundDoc to true
+(*
 delay 1.5
 tell application "Safari"
 	set windowName to name of front document as string
 	if windowName = "404 Not Found" then
-		set the URL of the front document to "http://www.google.com/cse?cx=009283852522218786394%3Ag40gqt2m6rq&ie=UTF-8&q=" & lookUp & "&sa=Search#gsc.tab=0&gsc.q=" & lookUp & "&gsc.page=1"
+		set the URL of the front document to "http://docs.coronalabs.com/api/index.html"
+		set foundDoc to false
 	end if
 end tell
+
+if foundDoc = false then
+	delay 1.5
+	tell application "System Events"
+		tell process "Safari"
+			click menu item "Find…" of menu 1 of menu item "Find" of menu 1 of menu bar item "Edit" of menu bar 1
+		end tell
+	end tell
+end if
+*)
+
+
+
+
