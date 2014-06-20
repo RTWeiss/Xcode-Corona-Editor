@@ -39,7 +39,7 @@ if scriptingEnabled then
 		--do shell script "perl -pi -w -e 's/lastKnownFileType = sourcecode.lua;/lastKnownFileType = sourcecode.corona; xcLanguageSpecificationIdentifier = xcode.lang.lua;/g' " & pbxFile
 		
 		tell application "Finder" to open coronaPath
-		delay 1
+		delay 2
 		tell application "Corona Simulator" to open projectPath
 	else
 		tell application "Corona Simulator" to open projectPath
