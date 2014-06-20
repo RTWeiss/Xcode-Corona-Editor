@@ -2,7 +2,7 @@
 
 This plugin works with Xcode 4+5 - Corona Starter, Basic, Pro, Enterprise and Cards
 
-Created by Jacob Nielsen 2014 - v.1.3
+Created by Jacob Nielsen 2014 - v.1.3.1
 
 --------------------------------------------------------------
 
@@ -41,7 +41,7 @@ After cloning this repo or downloading it as a zip file.
 
 
 --------------------------------------------------------------
-###Checking installation:###
+###Verifying installation:###
 
 * Start Xcode and create a new project template for Corona with:
   File > New > Project ( or shift+cmd+n )
