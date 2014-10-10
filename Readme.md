@@ -1,8 +1,8 @@
 ##Xcode as Corona SDK Editor##
 
-This plugin works with Xcode 4+5 - Corona Starter, Basic, Pro, Enterprise and Cards
+This plugin works with Xcode 4+5+6 - Corona Starter, Basic, Pro, Enterprise and Cards
 
-Created by Jacob Nielsen 2014 - v.1.3.1
+Created by Jacob Nielsen 2014 - v.1.4
 
 --------------------------------------------------------------
 

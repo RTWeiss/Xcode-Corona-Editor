@@ -80,5 +80,10 @@ rm -f AdditionalLanguages.plist
 cp "$SCRIPT_PATH/Lua.xclangspec" "$DVTFOUNDATION_PATH"
 
 # Remove any cached Xcode plugins
-#
+# Xcode 6 
+rm -f /private/var/folders/*/*/*/com.apple.DeveloperTools/*/Xcode/PlugInCache-Debug.xcplugincache
+# Xcode 4+5
 rm -f /private/var/folders/*/*/*/com.apple.DeveloperTools/*/Xcode/PlugInCache.xcplugincache
+
+
+
