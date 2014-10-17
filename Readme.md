@@ -2,7 +2,7 @@
 
 This plugin works with Xcode 4+5+6 - Corona Starter, Basic, Pro, Enterprise and Cards
 
-Created by Jacob Nielsen 2014 - v.1.4
+Created by Jacob Nielsen 2014 - v.1.4.1
 
 --------------------------------------------------------------
 
