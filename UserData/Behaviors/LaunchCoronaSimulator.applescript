@@ -11,11 +11,11 @@ This script only works if your xcodeproject file and the folder with
 your corona project files resides in the same folder and have the same name.
 *)
 
-property coronaPath : (path to applications folder as text) & "CoronaSDK:Corona Terminal"
+property coronaPath : (path to applications folder as text) & "CoronaSDK:Corona Simulator"
 
 tell application "Xcode"
 	
-	tell first project
+	tell front project -- first changed to front. allows multiple projects open
 		set targetProject to (get project directory)
 		set projectName to (get name)
 		set pbxFile to targetProject & "/" & projectName & ".xcodeproj/project.pbxproj"

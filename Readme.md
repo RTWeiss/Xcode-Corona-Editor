@@ -4,6 +4,7 @@ This plugin works with Xcode 4+5+6 - Corona Starter, Basic, Pro, Enterprise and 
 
 Created by Jacob Nielsen 2014 - v.1.4.1
 
+http://forums.coronalabs.com/topic/47224-xcode-corona-editor/
 --------------------------------------------------------------
 
 ###This project includes:###
